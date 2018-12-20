@@ -1,15 +1,16 @@
 <?php
 /**
- * @link https://craftcms.com/
- * @copyright Copyright (c) Pixel & Tonic, Inc.
+ * @link https://mikestecker.com/
+ * @copyright Copyright (c) Mike Stecker
+ * @copyright Based off Contact Form Honeypot - Copyright (c) Pixel & Tonic, Inc.
  * @license MIT
  */
 
-namespace craft\contactform\honeypot;
+namespace mikestecker\guestentrieshoneypot;
 
 use Craft;
-use craft\contactform\events\SendEvent;
-use craft\contactform\Mailer;
+use craft\guestentries\controllers\SaveController;
+use craft\guestentries\events\SaveEvent;
 use yii\base\Event;
 
 /**
@@ -32,11 +33,11 @@ class Plugin extends \craft\base\Plugin
     {
         parent::init();
 
-        if (!class_exists(Mailer::class)) {
+        if (!class_exists(SaveController::class)) {
             return;
         }
 
-        Event::on(Mailer::class, Mailer::EVENT_BEFORE_SEND, function(SendEvent $e) {
+        Event::on(SaveController::class, SaveController::EVENT_BEFORE_SAVE_ENTRY, function(SaveEvent $e) {
             $settings = $this->getSettings();
 
             if (!$settings->honeypotParam) {
@@ -74,7 +75,7 @@ class Plugin extends \craft\base\Plugin
         // Get the settings that are being defined by the config file
         $overrides = Craft::$app->getConfig()->getConfigFromFile(strtolower($this->id));
 
-        return Craft::$app->view->renderTemplate('contact-form-honeypot/_settings', [
+        return Craft::$app->view->renderTemplate('guest-entries-honeypot/_settings', [
             'settings' => $this->getSettings(),
             'overrides' => array_keys($overrides),
         ]);

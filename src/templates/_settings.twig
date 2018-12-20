@@ -2,9 +2,9 @@
 
 {% macro configWarning(setting) -%}
     {% set setting = '<code>'~setting~'</code>' %}
-    {{ "This is being overridden by the {setting} config setting in your {file} config file."|t('contact-form-honeypot', {
+    {{ "This is being overridden by the {setting} config setting in your {file} config file."|t('guest-entries-honeypot', {
         setting: setting,
-        file: 'contact-form-honeypot.php'
+        file: 'guest-entries-honeypot.php'
     })|raw }}
 {%- endmacro %}
 
@@ -12,11 +12,11 @@
 
 {{ forms.textField({
     first:        true,
-    label:        "Honeypot Form Param"|t('contact-form-honeypot'),
+    label:        "Honeypot Form Param"|t('guest-entries-honeypot'),
     id:           'honeypot-param',
     class:        'code',
     name:         'honeypotParam',
-    instructions: "The name that the honeypot field should have."|t('contact-form-honeypot'),
+    instructions: "The name that the honeypot field should have."|t('guest-entries-honeypot'),
     value:        (settings.honeypotParam ?: ''),
     disabled:     'honeypotParam' in overrides,
     warning:      'honeypotParam' in overrides ? configWarning('honeypotParam'),

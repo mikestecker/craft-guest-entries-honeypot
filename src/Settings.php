@@ -1,11 +1,12 @@
 <?php
 /**
- * @link https://craftcms.com/
- * @copyright Copyright (c) Pixel & Tonic, Inc.
+ * @link https://mikestecker.com/
+ * @copyright Copyright (c) Mike Stecker
+ * @copyright Based off Contact Form Honeypot - Copyright (c) Pixel & Tonic, Inc.
  * @license MIT
  */
 
-namespace craft\contactform\honeypot;
+namespace mikestecker\guestentrieshoneypot;
 
 use craft\base\Model;
 

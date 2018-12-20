@@ -1,12 +1,12 @@
 {
-  "name": "craftcms/contact-form-honeypot",
-  "description": "Add a honeypot captcha to your Craft CMS contact form",
-  "version": "1.0.2",
+  "name": "mikestecker/craft-guest-entries-honeypot",
+  "description": "Add a honeypot captcha to your Craft CMS guest entries form",
+  "version": "1.0.0",
   "type": "craft-plugin",
   "keywords": [
     "cms",
     "craftcms",
-    "contact",
+    "guest",
     "form",
     "honeypot",
     "yii2"
@@ -16,27 +16,31 @@
     {
       "name": "Pixel & Tonic",
       "homepage": "https://pixelandtonic.com/"
+    },
+    {
+      "name": "Mike Stecker",
+      "homepage": "https://github.com/mikestecker/"
     }
   ],
   "support": {
-    "email": "support@craftcms.com",
-    "issues": "https://github.com/craftcms/contact-form-honeypot/issues?state=open",
-    "source": "https://github.com/craftcms/contact-form-honeypot",
-    "docs": "https://github.com/craftcms/contact-form-honeypot",
-    "rss": "https://github.com/craftcms/contact-form-honeypot/commits/master.atom"
+    "email": "mike@stecker.me",
+    "issues": "https://github.com/mikestecker/craft-guest-entries-honeypot/issues?state=open",
+    "source": "https://github.com/mikestecker/craft-guest-entries-honeypot",
+    "docs": "https://github.com/mikestecker/craft-guest-entries-honeypot",
+    "rss": "https://github.com/mikestecker/craft-guest-entries-honeypot/commits/master.atom"
   },
   "require": {
-    "craftcms/cms": "^3.0.0-beta.20"
+    "craftcms/cms": "^3.0.0"
   },
   "autoload": {
     "psr-4": {
-      "craft\\contactform\\honeypot\\": "src/"
+      "mikestecker\\guestentrieshoneypot\\": "src/"
     }
   },
   "extra": {
-    "name": "Contact Form Honeypot",
-    "handle": "contact-form-honeypot",
-    "changelogUrl": "https://raw.githubusercontent.com/craftcms/contact-form-honeypot/master/CHANGELOG.md",
-    "downloadUrl": "https://github.com/craftcms/contact-form-honeypot/archive/master.zip"
+    "name": "Guest Entries Honeypot",
+    "handle": "guest-entries-honeypot",
+    "changelogUrl": "https://raw.githubusercontent.com/mikestecker/craft-guest-entries-honeypot/master/CHANGELOG.md",
+    "downloadUrl": "https://github.com/mikestecker/craft-guest-entries-honeypot/archive/master.zip"
   }
 }

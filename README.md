@@ -1,11 +1,11 @@
-# Contact Form Honeypot plugin for Craft
+# Guest Entries Honeypot plugin for Craft
 
-This plugin allows you to add a [honeypot captcha](http://haacked.com/archive/2007/09/11/honeypot-captcha.aspx/) to your Craft CMS contact form.
+This plugin allows you to add a [honeypot captcha](http://haacked.com/archive/2007/09/11/honeypot-captcha.aspx/) to your Craft CMS guest entry form.
 
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.20 or later, and the [Contact Form](https://github.com/craftcms/contact-form) plugin.
+This plugin requires Craft CMS 3.0.0 or later, and the [Guest Entries](https://github.com/craftcms/guest-entries) plugin.
 
 
 ## Installation
@@ -14,7 +14,7 @@ You can install this plugin from the Plugin Store or with Composer.
 
 #### From the Plugin Store
 
-Go to the Plugin Store in your project’s Control Panel and search for “Contact Form Honeypot”. Then click on the “Install” button in its modal window.
+Go to the Plugin Store in your project’s Control Panel and search for “Guest Entries Honeypot”. Then click on the “Install” button in its modal window.
 
 #### With Composer
 
@@ -25,17 +25,17 @@ Open your terminal and run the following commands:
 cd /path/to/my-project.test
 
 # tell Composer to load the plugin
-composer require craftcms/contact-form-honeypot
+composer require mikestecker/guest-entries-honeypot
 
 # tell Craft to install the plugin
-./craft install/plugin contact-form-honeypot
+./craft install/plugin guest-entries-honeypot
 ```
 
 ## Setup
 
-To configure the plugin, go to Settings → Contact Form Honeypot, and choose a param name that your honeypot field should have.
+To configure the plugin, go to Settings → Guest Entries Honeypot, and choose a param name that your honeypot field should have.
 
-Then edit your contact form template(s), and add the honeypot field.
+Then edit your entry form template(s), and add the honeypot field.
 
 ```html
 <input id="secretHoneypotParamName" name="secretHoneypotParamName" type="text">
