@@ -25,7 +25,7 @@ Open your terminal and run the following commands:
 cd /path/to/my-project.test
 
 # tell Composer to load the plugin
-composer require mikestecker/guest-entries-honeypot
+composer require mikestecker/craft-guest-entries-honeypot
 
 # tell Craft to install the plugin
 ./craft install/plugin guest-entries-honeypot
